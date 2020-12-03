@@ -7,7 +7,7 @@ public class UserService {
     public int getUserScore(String[] records, String email) {
         String[] valuesEmailAndScore;
         for (String record : records) {
-            valuesEmailAndScore = record.split(":");
+           String[] valuesEmailAndScore = record.split(":");
             if (valuesEmailAndScore[0].equals(email)) {
                 return Integer.parseInt(valuesEmailAndScore[1]);
             }
